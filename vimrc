@@ -16,6 +16,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-unimpaired'
+Plug 'vim-scripts/a.vim'
 call plug#end()
 
 " setup color scheme
