@@ -17,15 +17,16 @@ Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-scripts/a.vim'
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
 " setup color scheme
 set background=dark
 colorscheme gruvbox
 let g:gruvbox_contrast_dark='soft'
-let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
-      \ }
+"let g:lightline = {
+"      \ 'colorscheme': 'gruvbox',
+"      \ }
 
 "" ack.vim configs
 " set ack.vim to use ag if possible
@@ -53,6 +54,11 @@ set backspace=2 " make backspace work like most other programs
 set laststatus=2
 set ignorecase
 set smartcase
+" indent setting
+set tabstop=4 
+set shiftwidth=4 
+set noexpandtab
+set autoindent
 
 :augroup numbertoggle
 :  autocmd!
