@@ -36,13 +36,15 @@ endif
 " serach result with 30 rows
 let g:ack_qhandler = "botright copen 30"
 
+let g:ycm_python_binary_path = 'python'
 
 " Keybindings
 nmap <C-p> :Files<CR> " fzf find file 
 nmap <C-t> :Tags<CR> " fzf find Tag
 nmap <C-n> :NERDTreeToggle<CR> " NERDTree Keybind
 nmap <C-f> :Ack! "\b<cword>\b" <CR>" map ackvim serach
-
+"Remove all trailing whitespace by pressing F5
+nnoremap <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar><CR>
 
 "" Vim Settings
 set nocompatible
@@ -55,10 +57,12 @@ set laststatus=2
 set ignorecase
 set smartcase
 " indent setting
-set tabstop=4 
-set shiftwidth=4 
-set noexpandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
 set autoindent
+set colorcolumn=100
 
 :augroup numbertoggle
 :  autocmd!
@@ -67,3 +71,4 @@ set autoindent
 :augroup END
 
 syntax on
+filetype on
